@@ -1,0 +1,1527 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.com#"
+     xml:base="http://example.com"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:gufo="http://purl.org/nemo/gufo#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://example.com"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com#belongsToConference -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#belongsToConference">
+        <owl:inverseOf rdf:resource="http://example.com#hasConferenceTheme"/>
+        <rdfs:domain rdf:resource="http://example.com#ConferenceTheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#citesPublication -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#citesPublication">
+        <owl:inverseOf rdf:resource="http://example.com#isCitedBy"/>
+        <rdfs:domain rdf:resource="http://example.com#Citation"/>
+        <rdfs:range rdf:resource="http://example.com#Publication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#hasConferenceTheme -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#hasConferenceTheme"/>
+    
+
+
+    <!-- http://example.com#hasEventCategory -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#hasEventCategory">
+        <owl:inverseOf rdf:resource="http://example.com#isEventCategoryOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+        <rdfs:range rdf:resource="http://purl.org/nemo/gufo#Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#hasEventDate -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#hasEventDate">
+        <rdfs:domain rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+        <rdfs:range rdf:resource="http://example.com#Venue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#hasEventLocation -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#hasEventLocation">
+        <owl:inverseOf rdf:resource="http://example.com#isEventLocationOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#hasRelatedKeyword -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#hasRelatedKeyword">
+        <owl:inverseOf rdf:resource="http://example.com#isRelatedKeywordFor"/>
+        <rdfs:domain rdf:resource="http://example.com#ResearchTopic"/>
+        <rdfs:range rdf:resource="http://example.com#Keyword"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#isCitedBy -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#isCitedBy"/>
+    
+
+
+    <!-- http://example.com#isEventCategoryOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#isEventCategoryOf"/>
+    
+
+
+    <!-- http://example.com#isEventLocationOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#isEventLocationOf"/>
+    
+
+
+    <!-- http://example.com#isRelatedKeywordFor -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#isRelatedKeywordFor"/>
+    
+
+
+    <!-- http://example.com#person -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#person">
+        <rdfs:domain rdf:resource="http://example.com#Publication"/>
+        <rdfs:range rdf:resource="http://example.com#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#inheresIn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#inheresIn"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#mediates -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#mediates"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#participatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#participatedIn"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#wasCreatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#wasCreatedIn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com#hasAuthorName -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasAuthorName">
+        <rdfs:domain rdf:resource="http://example.com#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasConferenceDate -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasConferenceDate">
+        <rdfs:subPropertyOf rdf:resource="http://example.com#hasEventDate"/>
+        <rdfs:domain rdf:resource="http://example.com#Conference"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasEventDate -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasEventDate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasEventLocationName -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasEventLocationName">
+        <rdfs:domain rdf:resource="http://example.com#Venue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasKeywordText -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasKeywordText">
+        <rdfs:domain rdf:resource="http://example.com#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasPublicationAbstract -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasPublicationAbstract">
+        <rdfs:domain rdf:resource="http://example.com#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasPublicationDOI -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasPublicationDOI">
+        <rdfs:domain rdf:resource="http://example.com#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasPublicationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasPublicationDate">
+        <rdfs:domain rdf:resource="http://example.com#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasPublicationTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasPublicationTitle">
+        <rdfs:domain rdf:resource="http://example.com#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasWorkshopDate -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasWorkshopDate">
+        <rdfs:subPropertyOf rdf:resource="http://example.com#hasEventDate"/>
+        <rdfs:domain rdf:resource="http://example.com#Workshop"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com#Abstract -->
+
+    <owl:Class rdf:about="http://example.com#Abstract">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#AccessType -->
+
+    <owl:Class rdf:about="http://example.com#AccessType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/nemo/gufo#IntrinsicMode"/>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#Publication"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Article -->
+
+    <owl:Class rdf:about="http://example.com#Article">
+        <rdfs:subClassOf rdf:resource="http://example.com#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Author -->
+
+    <owl:Class rdf:about="http://example.com#Author">
+        <rdfs:subClassOf rdf:resource="http://example.com#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Award -->
+
+    <owl:Class rdf:about="http://example.com#Award">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#BookChapter -->
+
+    <owl:Class rdf:about="http://example.com#BookChapter">
+        <rdfs:subClassOf rdf:resource="http://example.com#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Citation -->
+
+    <owl:Class rdf:about="http://example.com#Citation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Closed -->
+
+    <owl:Class rdf:about="http://example.com#Closed">
+        <rdfs:subClassOf rdf:resource="http://example.com#AccessType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Coauthor -->
+
+    <owl:Class rdf:about="http://example.com#Coauthor">
+        <rdfs:subClassOf rdf:resource="http://example.com#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Collaboration -->
+
+    <owl:Class rdf:about="http://example.com#Collaboration">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:someValuesFrom rdf:resource="http://example.com#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Conference -->
+
+    <owl:Class rdf:about="http://example.com#Conference">
+        <rdfs:subClassOf rdf:resource="http://example.com#Venue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#participatedIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://example.com#ConferencePaper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#DateOfConference"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#ConferenceTheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://example.com#Workshop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#ConferencePaper -->
+
+    <owl:Class rdf:about="http://example.com#ConferencePaper">
+        <rdfs:subClassOf rdf:resource="http://example.com#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#ConferenceTheme -->
+
+    <owl:Class rdf:about="http://example.com#ConferenceTheme">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Conference"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#DOI -->
+
+    <owl:Class rdf:about="http://example.com#DOI">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#DateOfConference -->
+
+    <owl:Class rdf:about="http://example.com#DateOfConference">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Conference"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Edition -->
+
+    <owl:Class rdf:about="http://example.com#Edition">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Editor -->
+
+    <owl:Class rdf:about="http://example.com#Editor">
+        <rdfs:subClassOf rdf:resource="http://example.com#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Filiation -->
+
+    <owl:Class rdf:about="http://example.com#Filiation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Journal -->
+
+    <owl:Class rdf:about="http://example.com#Journal">
+        <rdfs:subClassOf rdf:resource="http://example.com#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Keyword -->
+
+    <owl:Class rdf:about="http://example.com#Keyword">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Language -->
+
+    <owl:Class rdf:about="http://example.com#Language">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Monograph -->
+
+    <owl:Class rdf:about="http://example.com#Monograph">
+        <rdfs:subClassOf rdf:resource="http://example.com#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#ORCID -->
+
+    <owl:Class rdf:about="http://example.com#ORCID">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Open -->
+
+    <owl:Class rdf:about="http://example.com#Open">
+        <rdfs:subClassOf rdf:resource="http://example.com#AccessType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Person -->
+
+    <owl:Class rdf:about="http://example.com#Person">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Filiation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#ORCID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Collaboration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Publication -->
+
+    <owl:Class rdf:about="http://example.com#Publication">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://example.com#Citation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://example.com#Collaboration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#DOI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Edition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Language"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publisher"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Topic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Keyword"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#ResearchTopic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Serie"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#AccessType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Abstract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#PublicationDate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Title"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Volume"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#wasCreatedIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Venue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#PublicationDate -->
+
+    <owl:Class rdf:about="http://example.com#PublicationDate">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Publisher -->
+
+    <owl:Class rdf:about="http://example.com#Publisher">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#ResearchTopic -->
+
+    <owl:Class rdf:about="http://example.com#ResearchTopic">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/nemo/gufo#Quality"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#Publication"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Reviewer -->
+
+    <owl:Class rdf:about="http://example.com#Reviewer">
+        <rdfs:subClassOf rdf:resource="http://example.com#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Serie -->
+
+    <owl:Class rdf:about="http://example.com#Serie">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Title -->
+
+    <owl:Class rdf:about="http://example.com#Title">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Topic -->
+
+    <owl:Class rdf:about="http://example.com#Topic">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Unavailable -->
+
+    <owl:Class rdf:about="http://example.com#Unavailable">
+        <rdfs:subClassOf rdf:resource="http://example.com#AccessType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Venue -->
+
+    <owl:Class rdf:about="http://example.com#Venue">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/nemo/gufo#Event"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#wasCreatedIn"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#Publication"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Volume -->
+
+    <owl:Class rdf:about="http://example.com#Volume">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Workshop -->
+
+    <owl:Class rdf:about="http://example.com#Workshop">
+        <rdfs:subClassOf rdf:resource="http://example.com#Venue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#WorkshopPaper -->
+
+    <owl:Class rdf:about="http://example.com#WorkshopPaper">
+        <rdfs:subClassOf rdf:resource="http://example.com#Publication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#participatedIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://example.com#Workshop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Category -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Category"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Event -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Event"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#EventType -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#EventType"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#FunctionalComplex -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#IntrinsicMode -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Kind -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Kind"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#MaterialRelationshipType -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Phase -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Phase"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Quality -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Quality"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Relator -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Relator"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Role -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Role"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com#Abstract -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Abstract">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#AccessType -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#AccessType">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Article -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Article">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Author -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Author">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Award -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Award">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#BookChapter -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#BookChapter">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Citation -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Citation">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Closed -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Closed">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Phase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Coauthor -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Coauthor">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Collaboration -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Collaboration">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Conference -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Conference">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#ConferencePaper -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#ConferencePaper">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#ConferenceTheme -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#ConferenceTheme">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#DOI -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#DOI">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#DateOfConference -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#DateOfConference">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Edition -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Edition">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Editor -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Editor">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Filiation -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Filiation">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Journal -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Journal">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Keyword -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Keyword">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Language -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Language">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Monograph -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Monograph">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#ORCID -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#ORCID">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Open -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Open">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Phase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Person -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Person">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Publication -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Publication">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#PublicationDate -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#PublicationDate">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Publisher -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Publisher">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#ResearchTopic -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#ResearchTopic">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Reviewer -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Reviewer">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Serie -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Serie">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Title -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Title">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Topic -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Topic">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Unavailable -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Unavailable">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Phase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Venue -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Venue">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Volume -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Volume">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Workshop -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Workshop">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#WorkshopPaper -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#WorkshopPaper">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#person -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#person">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://example.com#Abstract">
+        <rdfs:label xml:lang="en">Abstract</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#AccessType">
+        <rdfs:label xml:lang="en">AccessType</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Article">
+        <rdfs:label xml:lang="en">Article</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Author">
+        <rdfs:label xml:lang="en">Author</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Award">
+        <rdfs:label xml:lang="en">Award</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#BookChapter">
+        <rdfs:label xml:lang="en">Book Chapter</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Citation">
+        <rdfs:label xml:lang="en">Citation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Closed">
+        <rdfs:label xml:lang="en">Closed</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Coauthor">
+        <rdfs:label xml:lang="en">Coauthor</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Collaboration">
+        <rdfs:label xml:lang="en">Collaboration</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Conference">
+        <rdfs:label xml:lang="en">Conference</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#ConferencePaper">
+        <rdfs:label xml:lang="en">Conference paper</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#ConferenceTheme">
+        <rdfs:label xml:lang="en">Conference Theme</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#DOI">
+        <rdfs:label xml:lang="en">DOI</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#DateOfConference">
+        <rdfs:label xml:lang="en">Date of Conference</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Edition">
+        <rdfs:label xml:lang="en">Edition</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Editor">
+        <rdfs:label xml:lang="en">Editor</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Filiation">
+        <rdfs:label xml:lang="en">Filiation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Journal">
+        <rdfs:label xml:lang="en">Journal</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Keyword">
+        <rdfs:label xml:lang="en">Keyword</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Language">
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Monograph">
+        <rdfs:label xml:lang="en">Monograph</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#ORCID">
+        <rdfs:label xml:lang="en">ORCID</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Open">
+        <rdfs:label xml:lang="en">Open</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Person">
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Publication">
+        <rdfs:label xml:lang="en">Publication</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#PublicationDate">
+        <rdfs:label xml:lang="en">PublicationDate</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Publisher">
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#ResearchTopic">
+        <rdfs:label xml:lang="en">Research Topic</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Reviewer">
+        <rdfs:label xml:lang="en">Reviewer</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Serie">
+        <rdfs:label xml:lang="en">Serie</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Title">
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Topic">
+        <rdfs:label xml:lang="en">Topic</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Unavailable">
+        <rdfs:label xml:lang="en">Unavailable</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Venue">
+        <rdfs:label xml:lang="en">Venue</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Volume">
+        <rdfs:label xml:lang="en">Volume</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Workshop">
+        <rdfs:label xml:lang="en">Workshop</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#WorkshopPaper">
+        <rdfs:label xml:lang="en">Workshop paper</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com#Article"/>
+            <rdf:Description rdf:about="http://example.com#BookChapter"/>
+            <rdf:Description rdf:about="http://example.com#ConferencePaper"/>
+            <rdf:Description rdf:about="http://example.com#Journal"/>
+            <rdf:Description rdf:about="http://example.com#Monograph"/>
+            <rdf:Description rdf:about="http://example.com#WorkshopPaper"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com#Closed"/>
+            <rdf:Description rdf:about="http://example.com#Open"/>
+            <rdf:Description rdf:about="http://example.com#Unavailable"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
