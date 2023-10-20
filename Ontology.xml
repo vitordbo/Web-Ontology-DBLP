@@ -1,0 +1,3053 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.com#"
+     xml:base="http://example.com"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:gufo="http://purl.org/nemo/gufo#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://example.com"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com#belongsToConference -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#belongsToConference">
+        <rdfs:domain rdf:resource="http://example.com#ConferenceTheme"/>
+        <rdfs:range rdf:resource="http://example.com#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#belongsToEvent -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#belongsToEvent">
+        <rdfs:domain rdf:resource="http://example.com#Venue"/>
+        <rdfs:range rdf:resource="http://purl.org/nemo/gufo#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#hasAuthorName -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#hasAuthorName">
+        <rdfs:domain rdf:resource="http://example.com#Publication"/>
+        <rdfs:range rdf:resource="http://example.com#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#hasCoAuthor -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#hasCoAuthor">
+        <rdfs:domain rdf:resource="http://example.com#Publication"/>
+        <rdfs:range rdf:resource="http://example.com#Coauthor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#hasEdition -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#hasEdition">
+        <rdfs:domain rdf:resource="http://example.com#Publication"/>
+        <rdfs:range rdf:resource="http://example.com#Edition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#hasEventCategory -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#hasEventCategory">
+        <rdfs:domain rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+        <rdfs:range rdf:resource="http://purl.org/nemo/gufo#Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#hasEventDate -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#hasEventDate">
+        <rdfs:domain rdf:resource="http://purl.org/nemo/gufo#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#person -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#person">
+        <rdfs:domain rdf:resource="http://example.com#Publication"/>
+        <rdfs:range rdf:resource="http://example.com#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#inheresIn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#inheresIn"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#mediates -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#mediates"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#participatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#participatedIn"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#wasCreatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#wasCreatedIn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com#hasAuthorName -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasAuthorName">
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasConferenceDate -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasConferenceDate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasConferenceYear -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasConferenceYear">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.com#ConferencePaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasEventDate -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasEventDate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasJournalPublicationYear -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasJournalPublicationYear">
+        <rdfs:domain rdf:resource="http://example.com#Journal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasKeywordText -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasKeywordText">
+        <rdfs:domain rdf:resource="http://example.com#Keyword"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasLanguageName -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasLanguageName">
+        <rdfs:domain rdf:resource="http://example.com#Language"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasPublicationAbstract -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasPublicationAbstract">
+        <rdfs:domain rdf:resource="http://example.com#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasPublicationTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasPublicationTitle">
+        <rdfs:domain rdf:resource="http://example.com#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasPublicationYear -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasPublicationYear">
+        <rdfs:domain rdf:resource="http://example.com#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasVolumeNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasVolumeNumber">
+        <rdfs:domain rdf:resource="http://example.com#Volume"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com#hasWorkshopYear -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#hasWorkshopYear">
+        <rdfs:domain rdf:resource="http://example.com#WorkshopPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com#Abstract -->
+
+    <owl:Class rdf:about="http://example.com#Abstract">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#AccessType -->
+
+    <owl:Class rdf:about="http://example.com#AccessType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/nemo/gufo#IntrinsicMode"/>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#Publication"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#ActiveAuthor -->
+
+    <owl:Class rdf:about="http://example.com#ActiveAuthor">
+        <rdfs:subClassOf rdf:resource="http://example.com#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Article -->
+
+    <owl:Class rdf:about="http://example.com#Article">
+        <rdfs:subClassOf rdf:resource="http://example.com#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Author -->
+
+    <owl:Class rdf:about="http://example.com#Author">
+        <rdfs:subClassOf rdf:resource="http://example.com#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Award -->
+
+    <owl:Class rdf:about="http://example.com#Award">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#BookChapter -->
+
+    <owl:Class rdf:about="http://example.com#BookChapter">
+        <rdfs:subClassOf rdf:resource="http://example.com#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Citation -->
+
+    <owl:Class rdf:about="http://example.com#Citation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Closed -->
+
+    <owl:Class rdf:about="http://example.com#Closed">
+        <rdfs:subClassOf rdf:resource="http://example.com#AccessType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Coauthor -->
+
+    <owl:Class rdf:about="http://example.com#Coauthor">
+        <rdfs:subClassOf rdf:resource="http://example.com#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Collaboration -->
+
+    <owl:Class rdf:about="http://example.com#Collaboration">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:someValuesFrom rdf:resource="http://example.com#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Conference -->
+
+    <owl:Class rdf:about="http://example.com#Conference">
+        <rdfs:subClassOf rdf:resource="http://example.com#Venue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#participatedIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://example.com#ConferencePaper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#DateOfConference"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#ConferenceTheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://example.com#Workshop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#ConferencePaper -->
+
+    <owl:Class rdf:about="http://example.com#ConferencePaper">
+        <rdfs:subClassOf rdf:resource="http://example.com#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#ConferenceTheme -->
+
+    <owl:Class rdf:about="http://example.com#ConferenceTheme">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Conference"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#DOI -->
+
+    <owl:Class rdf:about="http://example.com#DOI">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#DateOfConference -->
+
+    <owl:Class rdf:about="http://example.com#DateOfConference">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Conference"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Edition -->
+
+    <owl:Class rdf:about="http://example.com#Edition">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Editor -->
+
+    <owl:Class rdf:about="http://example.com#Editor">
+        <rdfs:subClassOf rdf:resource="http://example.com#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Filiation -->
+
+    <owl:Class rdf:about="http://example.com#Filiation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Journal -->
+
+    <owl:Class rdf:about="http://example.com#Journal">
+        <rdfs:subClassOf rdf:resource="http://example.com#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Keyword -->
+
+    <owl:Class rdf:about="http://example.com#Keyword">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Language -->
+
+    <owl:Class rdf:about="http://example.com#Language">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Monograph -->
+
+    <owl:Class rdf:about="http://example.com#Monograph">
+        <rdfs:subClassOf rdf:resource="http://example.com#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#ORCID -->
+
+    <owl:Class rdf:about="http://example.com#ORCID">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Open -->
+
+    <owl:Class rdf:about="http://example.com#Open">
+        <rdfs:subClassOf rdf:resource="http://example.com#AccessType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Person -->
+
+    <owl:Class rdf:about="http://example.com#Person">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/nemo/gufo#FunctionalComplex"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#Filiation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#ORCID"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#Collaboration"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Publication -->
+
+    <owl:Class rdf:about="http://example.com#Publication">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/nemo/gufo#FunctionalComplex"/>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom rdf:resource="http://example.com#Collaboration"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#AccessType"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#Award"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#DOI"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#Edition"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#Language"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#Publisher"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#Topic"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#Abstract"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#Citation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#Keyword"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#PublicationDate"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#ResearchTopic"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#Serie"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#Title"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#Volume"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#wasCreatedIn"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#Venue"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#PublicationDate -->
+
+    <owl:Class rdf:about="http://example.com#PublicationDate">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Publisher -->
+
+    <owl:Class rdf:about="http://example.com#Publisher">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#ResearchTopic -->
+
+    <owl:Class rdf:about="http://example.com#ResearchTopic">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Reviewer -->
+
+    <owl:Class rdf:about="http://example.com#Reviewer">
+        <rdfs:subClassOf rdf:resource="http://example.com#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Serie -->
+
+    <owl:Class rdf:about="http://example.com#Serie">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Title -->
+
+    <owl:Class rdf:about="http://example.com#Title">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Topic -->
+
+    <owl:Class rdf:about="http://example.com#Topic">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Unavailable -->
+
+    <owl:Class rdf:about="http://example.com#Unavailable">
+        <rdfs:subClassOf rdf:resource="http://example.com#AccessType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Venue -->
+
+    <owl:Class rdf:about="http://example.com#Venue">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/nemo/gufo#Event"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#wasCreatedIn"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com#Publication"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Volume -->
+
+    <owl:Class rdf:about="http://example.com#Volume">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Workshop -->
+
+    <owl:Class rdf:about="http://example.com#Workshop">
+        <rdfs:subClassOf rdf:resource="http://example.com#Venue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#WorkshopPaper -->
+
+    <owl:Class rdf:about="http://example.com#WorkshopPaper">
+        <rdfs:subClassOf rdf:resource="http://example.com#Publication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#participatedIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://example.com#Workshop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Category -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Category"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Event -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Event"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#EventType -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#EventType"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#FunctionalComplex -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#IntrinsicMode -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Kind -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Kind"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#MaterialRelationshipType -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Phase -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Phase"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Quality -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Quality"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Relator -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Relator"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Role -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Role"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com#A_3D_serious_game_for_medical_students_training_in_clinical_cases -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#A_3D_serious_game_for_medical_students_training_in_clinical_cases">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2016</hasConferenceYear>
+        <hasPublicationTitle>A_3D_serious_game_for_medical_students_training_in_clinical_cases</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#A_Baseline_Patient_Model_to_Support_Testing_of_Medical_Cyber-Physical_Systems -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#A_Baseline_Patient_Model_to_Support_Testing_of_Medical_Cyber-Physical_Systems">
+        <hasCoAuthor rdf:resource="http://example.com#Lenardo_C._E._Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2015</hasConferenceYear>
+        <hasPublicationTitle>A_Baseline_Patient_Model_to_Support_Testing_of_Medical_Cyber-Physical_Systems</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#A_Comparative_Study_of_Machine_Learning_Algorithms_for_the_Detection_of_Fake_News_on_the_Internet -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#A_Comparative_Study_of_Machine_Learning_Algorithms_for_the_Detection_of_Fake_News_on_the_Internet">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasCoAuthor rdf:resource="http://example.com#Lenardo_C._E._Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2022</hasConferenceYear>
+        <hasPublicationTitle>A_Comparative_Study_of_Machine_Learning_Algorithms_for_the_Detection_of_Fake_News_on_the_Internet</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#A_Data_Connector_Store_for_International_Data_Spaces -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#A_Data_Connector_Store_for_International_Data_Spaces">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasPublicationTitle>A_Data_Connector_Store_for_International_Data_Spaces</hasPublicationTitle>
+        <hasWorkshopYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2022</hasWorkshopYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#A_Methodology_to_Adapt_Data_Path_Architectures_to_a_MIPS-1_Model -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#A_Methodology_to_Adapt_Data_Path_Architectures_to_a_MIPS-1_Model">
+        <hasCoAuthor rdf:resource="http://example.com#Leonardo_Augusto_Casillo"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2012</hasConferenceYear>
+        <hasPublicationTitle>A_Methodology_to_Adapt_Data_Path_Architectures_to_a_MIPS-1_Model</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#A_Model-Based_Approach_to_Support_Validation_of_Medical_Cyber-Physical_Systems -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#A_Model-Based_Approach_to_Support_Validation_of_Medical_Cyber-Physical_Systems">
+        <hasCoAuthor rdf:resource="http://example.com#Lenardo_C._E._Silva"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2015</hasJournalPublicationYear>
+        <hasPublicationTitle>A_Model-Based_Approach_to_Support_Validation_of_Medical_Cyber-Physical_Systems</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#A_Petri_Net_Model_Specification_for_Delivering_Adaptable_Ads_through_Digital_Signage_in_Pervasive_Environments -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#A_Petri_Net_Model_Specification_for_Delivering_Adaptable_Ads_through_Digital_Signage_in_Pervasive_Environments">
+        <hasCoAuthor rdf:resource="http://example.com#Lenardo_C._E._Silva"/>
+        <hasPublicationTitle>A_Petri_Net_Model_Specification_for_Delivering_Adaptable_Ads_through_Digital_Signage_in_Pervasive_Environments</hasPublicationTitle>
+        <hasWorkshopYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2013</hasWorkshopYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#A_Portable_Surface_Plasmons_Resonance_Sensor_Based_on_Single-Board_Computer -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#A_Portable_Surface_Plasmons_Resonance_Sensor_Based_on_Single-Board_Computer">
+        <hasCoAuthor rdf:resource="http://example.com#Leiva_Casemiro_Oliveira"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2023</hasJournalPublicationYear>
+        <hasPublicationTitle>A_Portable_Surface_Plasmons_Resonance_Sensor_Based_on_Single-Board_Computer</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#A_Surface_Plasmon_Resonance_Biochip_That_Operates_Both_in_the_Angular_and_Wavelength_Interrogation_Modes -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#A_Surface_Plasmon_Resonance_Biochip_That_Operates_Both_in_the_Angular_and_Wavelength_Interrogation_Modes">
+        <hasCoAuthor rdf:resource="http://example.com#Leiva_Casemiro_Oliveira"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2013</hasJournalPublicationYear>
+        <hasPublicationTitle>A_Surface_Plasmon_Resonance_Biochip_That_Operates_Both_in_the_Angular_and_Wavelength_Interrogation_Modes</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#A_biased_random-key_genetic_algorithm_for_the_two-level_hub_location_routing_problem_with_directed_tours -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#A_biased_random-key_genetic_algorithm_for_the_two-level_hub_location_routing_problem_with_directed_tours">
+        <hasAuthorName rdf:resource="http://example.com#Fábio_Francisco_da_Costa_Fontes"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2023</hasJournalPublicationYear>
+        <hasPublicationTitle>A_biased_random-key_genetic_algorithm_for_the_two-level_hub_location_routing_problem_with_directed_tours</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#A_comparative_analysis_between_classification_algorithms_for_recognizing_the_types_of_food_ingested -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#A_comparative_analysis_between_classification_algorithms_for_recognizing_the_types_of_food_ingested">
+        <hasAuthorName rdf:resource="http://example.com#Angélica_Félix_de_Castro"/>
+        <hasCoAuthor rdf:resource="http://example.com#Lenardo_C._E._Silva"/>
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</hasConferenceYear>
+        <hasPublicationTitle>A_comparative_analysis_between_classification_algorithms_for_recognizing_the_types_of_food_ingested</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#A_model-based_architecture_for_testing_medical_cyber-physical_systems -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#A_model-based_architecture_for_testing_medical_cyber-physical_systems">
+        <hasCoAuthor rdf:resource="http://example.com#Lenardo_C._E._Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2014</hasConferenceYear>
+        <hasPublicationTitle>A_model-based_architecture_for_testing_medical_cyber-physical_systems</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#A_model-driven_product_line_development_approach_to_build_safety-critical_embedded_families -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#A_model-driven_product_line_development_approach_to_build_safety-critical_embedded_families">
+        <rdf:type rdf:resource="http://example.com#Monograph"/>
+        <hasAuthorName rdf:resource="http://example.com#Paulo_Gabriel_Gadelha_Queiroz"/>
+        <hasPublicationTitle>A_model-driven_product_line_development_approach_to_build_safety-critical_embedded_families</hasPublicationTitle>
+        <hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</hasPublicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#A_serious_game_to_support_learning_and_minimize_the_social_isolation_of_children_with_autism -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#A_serious_game_to_support_learning_and_minimize_the_social_isolation_of_children_with_autism">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</hasConferenceYear>
+        <hasPublicationTitle>A_serious_game_to_support_learning_and_minimize_the_social_isolation_of_children_with_autism</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#A_study_on_the_impact_of_moodle_chat_and_forum_interaction_tools_on_EaD_student_performance -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#A_study_on_the_impact_of_moodle_chat_and_forum_interaction_tools_on_EaD_student_performance">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasCoAuthor rdf:resource="http://example.com#Lenardo_C._E._Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</hasConferenceYear>
+        <hasPublicationTitle>A_study_on_the_impact_of_moodle_chat_and_forum_interaction_tools_on_EaD_student_performance</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#A_system_for_continuous_monitoring_of_food_intake_in_patients_with_dysphagia -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#A_system_for_continuous_monitoring_of_food_intake_in_patients_with_dysphagia">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2021</hasJournalPublicationYear>
+        <hasPublicationTitle>A_system_for_continuous_monitoring_of_food_intake_in_patients_with_dysphagia</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#A_variable_neighbourhood_decomposition_search_approach_applied_to_a_global_liner_shipping_network_using_a_hub-and-spoke_with_sub-hub_structure -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#A_variable_neighbourhood_decomposition_search_approach_applied_to_a_global_liner_shipping_network_using_a_hub-and-spoke_with_sub-hub_structure">
+        <hasAuthorName rdf:resource="http://example.com#Fábio_Francisco_da_Costa_Fontes"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2021</hasJournalPublicationYear>
+        <hasPublicationTitle>A_variable_neighbourhood_decomposition_search_approach_applied_to_a_global_liner_shipping_network_using_a_hub-and-spoke_with_sub-hub_structure</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Abstract -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Abstract">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#AccessType -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#AccessType">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Agency_Monitoring_Patterns_for_Value_Networks -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Agency_Monitoring_Patterns_for_Value_Networks">
+        <hasAuthorName rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasCoAuthor rdf:resource="http://example.com#Angélica_Félix_de_Castro"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2017</hasConferenceYear>
+        <hasPublicationTitle>Agency_Monitoring_Patterns_for_Value_Networks</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Amanda_Gondim_de_Oliveira -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Amanda_Gondim_de_Oliveira">
+        <rdf:type rdf:resource="http://example.com#Author"/>
+        <rdf:type rdf:resource="http://example.com#Person"/>
+        <hasAuthorName>Amanda Gondim de Oliveira</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#An_Agent-Based_Approach_for_Delivering_Educational_Contents_Through_Interactive_Digital_TV_in_the_Context_of_T-Learning -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#An_Agent-Based_Approach_for_Delivering_Educational_Contents_Through_Interactive_Digital_TV_in_the_Context_of_T-Learning">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2015</hasJournalPublicationYear>
+        <hasPublicationTitle>An_Agent-Based_Approach_for_Delivering_Educational_Contents_Through_Interactive_Digital_TV_in_the_Context_of_T-Learning</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#An_Analysis_of_Information_Dynamic_Behavior_Using_Autoregressive_Models -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#An_Analysis_of_Information_Dynamic_Behavior_Using_Autoregressive_Models">
+        <rdf:type rdf:resource="http://example.com#Article"/>
+        <hasAuthorName rdf:resource="http://example.com#Amanda_Gondim_de_Oliveira"/>
+        <hasPublicationTitle>An_Analysis_of_Information_Dynamic_Behavior_Using_Autoregressive_Models</hasPublicationTitle>
+        <hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</hasPublicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#An_Animated_Pedagogical_Agent_to_Support_Problem-Based_Learning -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#An_Animated_Pedagogical_Agent_to_Support_Problem-Based_Learning">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2013</hasJournalPublicationYear>
+        <hasPublicationTitle>An_Animated_Pedagogical_Agent_to_Support_Problem-Based_Learning</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#An_Approach_to_Assess_Knowledge_and_Skills_in_Risk_Management_Through_Project-Based_Learning -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#An_Approach_to_Assess_Knowledge_and_Skills_in_Risk_Management_Through_Project-Based_Learning">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2012</hasJournalPublicationYear>
+        <hasPublicationTitle>An_Approach_to_Assess_Knowledge_and_Skills_in_Risk_Management_Through_Project-Based_Learning</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#An_Automated_Platform_for_Surface_Plasmon_Resonance-Based_Sensors -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#An_Automated_Platform_for_Surface_Plasmon_Resonance-Based_Sensors">
+        <hasCoAuthor rdf:resource="http://example.com#Leiva_Casemiro_Oliveira"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2021</hasJournalPublicationYear>
+        <hasPublicationTitle>An_Automated_Platform_for_Surface_Plasmon_Resonance-Based_Sensors</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#An_Experimental_Evaluation_of_Combination_of_Features_on_the_IPNoSys -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#An_Experimental_Evaluation_of_Combination_of_Features_on_the_IPNoSys">
+        <hasCoAuthor rdf:resource="http://example.com#Silvio_Roberto_Fernandes"/>
+        <hasPublicationTitle>An_Experimental_Evaluation_of_Combination_of_Features_on_the_IPNoSys</hasPublicationTitle>
+        <hasWorkshopYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2013</hasWorkshopYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#An_Investigation_on_the_use_of_Ontologies_for_pattern_classification_-_Study_applied_to_the_monitoring_of_food_intake -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#An_Investigation_on_the_use_of_Ontologies_for_pattern_classification_-_Study_applied_to_the_monitoring_of_food_intake">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2018</hasConferenceYear>
+        <hasPublicationTitle>An_Investigation_on_the_use_of_Ontologies_for_pattern_classification_-_Study_applied_to_the_monitoring_of_food_intake</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#An_agent-based_approach_for_supporting_the_knowledge_transfer_in_the_software_requirements_engineering -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#An_agent-based_approach_for_supporting_the_knowledge_transfer_in_the_software_requirements_engineering">
+        <hasAuthorName rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2013</hasJournalPublicationYear>
+        <hasPublicationTitle>An_agent-based_approach_for_supporting_the_knowledge_transfer_in_the_software_requirements_engineering</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#An_agent-based_architecture_for_supporting_the_workgroups_creation_and_the_detection_of_out-of-context_conversation_on_problem-based_learning_in_virtual_learning_environments -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#An_agent-based_architecture_for_supporting_the_workgroups_creation_and_the_detection_of_out-of-context_conversation_on_problem-based_learning_in_virtual_learning_environments">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2011</hasConferenceYear>
+        <hasPublicationTitle>An_agent-based_architecture_for_supporting_the_workgroups_creation_and_the_detection_of_out-of-context_conversation_on_problem-based_learning_in_virtual_learning_environments</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#An_approach_for_recommending_personalized_contents_for_homecare_users_in_the_context_of_health_2.0 -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#An_approach_for_recommending_personalized_contents_for_homecare_users_in_the_context_of_health_2.0">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2014</hasConferenceYear>
+        <hasPublicationTitle>An_approach_for_recommending_personalized_contents_for_homecare_users_in_the_context_of_health_2.0</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#An_intelligent_and_persistent_browser-based_game_for_oil_drilling_operators_training -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#An_intelligent_and_persistent_browser-based_game_for_oil_drilling_operators_training">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2011</hasConferenceYear>
+        <hasPublicationTitle>An_intelligent_and_persistent_browser-based_game_for_oil_drilling_operators_training</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#An_ontology_used_to_support_learning_in_the_field_of_heritage_education -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#An_ontology_used_to_support_learning_in_the_field_of_heritage_education">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</hasConferenceYear>
+        <hasPublicationTitle>An_ontology_used_to_support_learning_in_the_field_of_heritage_education</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Analysis_of_Relational_and_Object_Oriented_Database_from_SAE-GIN -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Analysis_of_Relational_and_Object_Oriented_Database_from_SAE-GIN">
+        <hasCoAuthor rdf:resource="http://example.com#Angélica_Félix_de_Castro"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2018</hasConferenceYear>
+        <hasPublicationTitle>Analysis_of_Relational_and_Object_Oriented_Database_from_SAE-GIN</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Analysis_of_the_contribution_of_computer-supported_learning_to_organizational_knowledge_management -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Analysis_of_the_contribution_of_computer-supported_learning_to_organizational_knowledge_management">
+        <hasAuthorName rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2007</hasConferenceYear>
+        <hasPublicationTitle>Analysis_of_the_contribution_of_computer-supported_learning_to_organizational_knowledge_management</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Angélica_Félix_de_Castro -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Angélica_Félix_de_Castro">
+        <rdf:type rdf:resource="http://example.com#Author"/>
+        <rdf:type rdf:resource="http://example.com#Person"/>
+        <hasAuthorName>Angélica Félix de Castro</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Aplicação_de_Fuzzy_para_a_redução_do_consumo_de_energia_de_módulos_internos_em_veículos_aéreos_não_tripulados -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Aplicação_de_Fuzzy_para_a_redução_do_consumo_de_energia_de_módulos_internos_em_veículos_aéreos_não_tripulados">
+        <hasCoAuthor rdf:resource="http://example.com#Angélica_Félix_de_Castro"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2016</hasConferenceYear>
+        <hasPublicationTitle>Aplicação_de_Fuzzy_para_a_redução_do_consumo_de_energia_de_módulos_internos_em_veículos_aéreos_não_tripulados</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Applicability_of_JINI_technology_on_development_of_network_management_systems -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Applicability_of_JINI_technology_on_development_of_network_management_systems">
+        <rdf:type rdf:resource="http://example.com#Monograph"/>
+        <hasAuthorName rdf:resource="http://example.com#Helcio_Wagner_da_Silva"/>
+        <hasPublicationTitle>Applicability_of_JINI_technology_on_development_of_network_management_systems</hasPublicationTitle>
+        <hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</hasPublicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Applying_Formal_Methods_in_Ontology_Reconciliation_Techniques_Design -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Applying_Formal_Methods_in_Ontology_Reconciliation_Techniques_Design">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2007</hasConferenceYear>
+        <hasPublicationTitle>Applying_Formal_Methods_in_Ontology_Reconciliation_Techniques_Design</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Article -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Article">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Author -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Author">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Availability_Considerations_in_Network_Design -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Availability_Considerations_in_Network_Design">
+        <hasAuthorName rdf:resource="http://example.com#Flávia_Estelia_Silva_Coelho"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2001</hasConferenceYear>
+        <hasPublicationTitle>Availability_Considerations_in_Network_Design</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Award -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Award">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Bayesian_network_approach_to_assist_on_the_interpretation_of_software_metrics -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Bayesian_network_approach_to_assist_on_the_interpretation_of_software_metrics">
+        <hasCoAuthor rdf:resource="http://example.com#Lenardo_C._E._Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2015</hasConferenceYear>
+        <hasPublicationTitle>Bayesian_network_approach_to_assist_on_the_interpretation_of_software_metrics</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#BookChapter -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#BookChapter">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Bruno_de_Sousa_Monteiro -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Bruno_de_Sousa_Monteiro">
+        <rdf:type rdf:resource="http://example.com#Author"/>
+        <rdf:type rdf:resource="http://example.com#Coauthor"/>
+        <rdf:type rdf:resource="http://example.com#Person"/>
+        <hasAuthorName>Bruno_de_Sousa_Monteiro</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Challenges_in_Predictive_Self-Adaptation_of_Service_Bundles -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Challenges_in_Predictive_Self-Adaptation_of_Service_Bundles">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2009</hasConferenceYear>
+        <hasPublicationTitle>Challenges_in_Predictive_Self-Adaptation_of_Service_Bundles</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Citation -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Citation">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Closed -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Closed">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Phase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Coauthor -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Coauthor">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Collaboration -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Collaboration">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Coloured_Petri_nets_for_abstract_test_generation_in_software_engineering -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Coloured_Petri_nets_for_abstract_test_generation_in_software_engineering">
+        <hasCoAuthor rdf:resource="http://example.com#Lenardo_C._E._Silva"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2023</hasJournalPublicationYear>
+        <hasPublicationTitle>Coloured_Petri_nets_for_abstract_test_generation_in_software_engineering</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Conference -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Conference">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#ConferencePaper -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#ConferencePaper">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#ConferenceTheme -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#ConferenceTheme">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Configuring_Value_Networks_based_on_Subjective_Business_Values -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Configuring_Value_Networks_based_on_Subjective_Business_Values">
+        <hasAuthorName rdf:resource="http://example.com#Angélica_Félix_de_Castro"/>
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2018</hasConferenceYear>
+        <hasPublicationTitle>Configuring_Value_Networks_based_on_Subjective_Business_Values</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Connection_Mechanisms_of_CCA_Components_for_Parallel_Applications -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Connection_Mechanisms_of_CCA_Components_for_Parallel_Applications">
+        <hasCoAuthor rdf:resource="http://example.com#Paulo_Henrique_Lopes_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2012</hasConferenceYear>
+        <hasPublicationTitle>Connection_Mechanisms_of_CCA_Components_for_Parallel_Applications</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#DOI -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#DOI">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Danniel_Cavalcante_Lopes -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Danniel_Cavalcante_Lopes">
+        <rdf:type rdf:resource="http://example.com#Author"/>
+        <rdf:type rdf:resource="http://example.com#Coauthor"/>
+        <rdf:type rdf:resource="http://example.com#Person"/>
+        <hasAuthorName>Danniel_Cavalcante_Lopes</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Data_analysis_of_the_performance_of_Brazilian_higher_education_medicine_courses -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Data_analysis_of_the_performance_of_Brazilian_higher_education_medicine_courses">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasCoAuthor rdf:resource="http://example.com#Lenardo_C._E._Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</hasConferenceYear>
+        <hasPublicationTitle>Data_analysis_of_the_performance_of_Brazilian_higher_education_medicine_courses</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#DateOfConference -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#DateOfConference">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Definition_of_Strategies_for_Crime_Prevention_and_Combat_Using_Fuzzy_Clustering_and_Formal_Concept_Analysis -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Definition_of_Strategies_for_Crime_Prevention_and_Combat_Using_Fuzzy_Clustering_and_Formal_Concept_Analysis">
+        <hasCoAuthor rdf:resource="http://example.com#Angélica_Félix_de_Castro"/>
+        <hasCoAuthor rdf:resource="http://example.com#Danniel_Cavalcante_Lopes"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</hasJournalPublicationYear>
+        <hasPublicationTitle>Definition_of_Strategies_for_Crime_Prevention_and_Combat_Using_Fuzzy_Clustering_and_Formal_Concept_Analysis</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Design_methodology_of_a_self-priming_PMMA_valveless_piezoelectric_micro-pump -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Design_methodology_of_a_self-priming_PMMA_valveless_piezoelectric_micro-pump">
+        <hasCoAuthor rdf:resource="http://example.com#Leiva_Casemiro_Oliveira"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2013</hasConferenceYear>
+        <hasPublicationTitle>Design_methodology_of_a_self-priming_PMMA_valveless_piezoelectric_micro-pump</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Designing_future_scenarios_in_e-tourism -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Designing_future_scenarios_in_e-tourism">
+        <hasCoAuthor rdf:resource="http://example.com#Bruno_de_Sousa_Monteiro"/>
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2022</hasConferenceYear>
+        <hasPublicationTitle>Designing_future_scenarios_in_e-tourism</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Early_diagnosis_of_gastrointestinal_cancer_by_using_case-based_and_rule-based_reasoning -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Early_diagnosis_of_gastrointestinal_cancer_by_using_case-based_and_rule-based_reasoning">
+        <hasCoAuthor rdf:resource="http://example.com#Lenardo_C._E._Silva"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2016</hasJournalPublicationYear>
+        <hasPublicationTitle>Early_diagnosis_of_gastrointestinal_cancer_by_using_case-based_and_rule-based_reasoning</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Edition -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Edition">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Editor -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Editor">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Ensemble_classifiers_in_a_serious_game_for_medical_students_in_clinical_cases -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Ensemble_classifiers_in_a_serious_game_for_medical_students_in_clinical_cases">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</hasConferenceYear>
+        <hasPublicationTitle>Ensemble_classifiers_in_a_serious_game_for_medical_students_in_clinical_cases</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Enterprise_Monitoring_Ontology -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Enterprise_Monitoring_Ontology">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2011</hasConferenceYear>
+        <hasPublicationTitle>Enterprise_Monitoring_Ontology</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Evaluating_the_signal_processing_chain_employed_in_surface_plasmon_resonance_biosensing -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Evaluating_the_signal_processing_chain_employed_in_surface_plasmon_resonance_biosensing">
+        <hasCoAuthor rdf:resource="http://example.com#Leiva_Casemiro_Oliveira"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2014</hasConferenceYear>
+        <hasPublicationTitle>Evaluating_the_signal_processing_chain_employed_in_surface_plasmon_resonance_biosensing</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Extending_SOA_with_Semantic_Mediators -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Extending_SOA_with_Semantic_Mediators">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006</hasConferenceYear>
+        <hasPublicationTitle>Extending_SOA_with_Semantic_Mediators</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Filiation -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Filiation">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Flávia_Estelia_Silva_Coelho -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Flávia_Estelia_Silva_Coelho">
+        <rdf:type rdf:resource="http://example.com#Author"/>
+        <rdf:type rdf:resource="http://example.com#Coauthor"/>
+        <rdf:type rdf:resource="http://example.com#Person"/>
+        <hasAuthorName>Flávia_Estelia_Silva_Coelho</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Formalizing_ontology_reconciliation_techniques_as_a_basis_for_meaningful_mediation_in_service-related_tasks -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Formalizing_ontology_reconciliation_techniques_as_a_basis_for_meaningful_mediation_in_service-related_tasks">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2007</hasConferenceYear>
+        <hasPublicationTitle>Formalizing_ontology_reconciliation_techniques_as_a_basis_for_meaningful_mediation_in_service-related_tasks</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Francisco_Milton_Mendes_Neto -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Francisco_Milton_Mendes_Neto">
+        <rdf:type rdf:resource="http://example.com#Author"/>
+        <rdf:type rdf:resource="http://example.com#Coauthor"/>
+        <rdf:type rdf:resource="http://example.com#Person"/>
+        <hasAuthorName>Francisco_Milton_Mendes_Neto</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Fábio_Francisco_da_Costa_Fontes -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Fábio_Francisco_da_Costa_Fontes">
+        <rdf:type rdf:resource="http://example.com#Author"/>
+        <rdf:type rdf:resource="http://example.com#Coauthor"/>
+        <rdf:type rdf:resource="http://example.com#Person"/>
+        <hasAuthorName>Fábio_Francisco_da_Costa_Fontes</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Helcio_Wagner_da_Silva -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Helcio_Wagner_da_Silva">
+        <rdf:type rdf:resource="http://example.com#Author"/>
+        <rdf:type rdf:resource="http://example.com#Coauthor"/>
+        <rdf:type rdf:resource="http://example.com#Person"/>
+        <hasAuthorName>Helcio_Wagner_da_Silva</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Image_Filtering_Model_Based_on_Convolutional_Neural_Networks_for_Automatic_Counting_of_Post-larvae_in_Aquaculture -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Image_Filtering_Model_Based_on_Convolutional_Neural_Networks_for_Automatic_Counting_of_Post-larvae_in_Aquaculture">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2022</hasConferenceYear>
+        <hasPublicationTitle>Image_Filtering_Model_Based_on_Convolutional_Neural_Networks_for_Automatic_Counting_of_Post-larvae_in_Aquaculture</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Implementation_of_a_FPGA-based_data_acquisition_and_processing_system_for_image_sensors_employed_in_SPR_biosensing -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Implementation_of_a_FPGA-based_data_acquisition_and_processing_system_for_image_sensors_employed_in_SPR_biosensing">
+        <hasCoAuthor rdf:resource="http://example.com#Leiva_Casemiro_Oliveira"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2014</hasConferenceYear>
+        <hasPublicationTitle>Implementation_of_a_FPGA-based_data_acquisition_and_processing_system_for_image_sensors_employed_in_SPR_biosensing</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Improved_data_extraction_algorithm_for_biosensors_utilizing_surface_plasmon_resonance_sensing -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Improved_data_extraction_algorithm_for_biosensors_utilizing_surface_plasmon_resonance_sensing">
+        <hasCoAuthor rdf:resource="http://example.com#Leiva_Casemiro_Oliveira"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2014</hasConferenceYear>
+        <hasPublicationTitle>Improved_data_extraction_algorithm_for_biosensors_utilizing_surface_plasmon_resonance_sensing</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Improving_Accuracy_of_Patient_Synthetic_Data_for_Testing_Medical_Cyber-Physical_Systems -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Improving_Accuracy_of_Patient_Synthetic_Data_for_Testing_Medical_Cyber-Physical_Systems">
+        <hasCoAuthor rdf:resource="http://example.com#Lenardo_C._E._Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2016</hasConferenceYear>
+        <hasPublicationTitle>Improving_Accuracy_of_Patient_Synthetic_Data_for_Testing_Medical_Cyber-Physical_Systems</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Integrating_Computer-Supported_Learning_and_Knowledge_Management_through_the_Support_of_the_Training_Management_Life_Cycle -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Integrating_Computer-Supported_Learning_and_Knowledge_Management_through_the_Support_of_the_Training_Management_Life_Cycle">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2005</hasConferenceYear>
+        <hasPublicationTitle>Integrating_Computer-Supported_Learning_and_Knowledge_Management_through_the_Support_of_the_Training_Management_Life_Cycle</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Integration_of_routing_and_time_synchronization_protocols_for_wireless_sensor_networks -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Integration_of_routing_and_time_synchronization_protocols_for_wireless_sensor_networks">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2008</hasConferenceYear>
+        <hasPublicationTitle>Integration_of_routing_and_time_synchronization_protocols_for_wireless_sensor_networks</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Journal -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Journal">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Keyword -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Keyword">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Language -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Language">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Learning_Risk_Management_in_Software_Projects_with_a_Serious_Game_Based_on_Intelligent_Agents_and_Fuzzy_Systems -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Learning_Risk_Management_in_Software_Projects_with_a_Serious_Game_Based_on_Intelligent_Agents_and_Fuzzy_Systems">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2013</hasConferenceYear>
+        <hasPublicationTitle>Learning_Risk_Management_in_Software_Projects_with_a_Serious_Game_Based_on_Intelligent_Agents_and_Fuzzy_Systems</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Leiva_Casemiro_Oliveira -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Leiva_Casemiro_Oliveira">
+        <rdf:type rdf:resource="http://example.com#Author"/>
+        <rdf:type rdf:resource="http://example.com#Coauthor"/>
+        <rdf:type rdf:resource="http://example.com#Person"/>
+        <hasAuthorName>Leiva_Casemiro_Oliveira</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Lenardo_C._E._Silva -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Lenardo_C._E._Silva">
+        <rdf:type rdf:resource="http://example.com#Author"/>
+        <rdf:type rdf:resource="http://example.com#Coauthor"/>
+        <rdf:type rdf:resource="http://example.com#Person"/>
+        <hasAuthorName>Lenardo_C._E._Silva</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Leonardo_Augusto_Casillo -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Leonardo_Augusto_Casillo">
+        <rdf:type rdf:resource="http://example.com#Author"/>
+        <rdf:type rdf:resource="http://example.com#Coauthor"/>
+        <rdf:type rdf:resource="http://example.com#Person"/>
+        <hasAuthorName>Leonardo_Augusto_Casillo</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#MOSS_based_Methodology_to_Building_an_Operational_System_for_MIPS_Simulator -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#MOSS_based_Methodology_to_Building_an_Operational_System_for_MIPS_Simulator">
+        <hasCoAuthor rdf:resource="http://example.com#Leiva_Casemiro_Oliveira"/>
+        <hasCoAuthor rdf:resource="http://example.com#Silvio_Roberto_Fernandes"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</hasConferenceYear>
+        <hasPublicationTitle>MOSS_based_Methodology_to_Building_an_Operational_System_for_MIPS_Simulator</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Modeling_E-Business_Customization_with_e3value_Modeling -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Modeling_E-Business_Customization_with_e3value_Modeling">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2016</hasConferenceYear>
+        <hasPublicationTitle>Modeling_E-Business_Customization_with_e3value_Modeling</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Modeling_unmanned_aerial_vehicle_system_for_identifying_foci_of_arboviral_disease_with_monitoring_system -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Modeling_unmanned_aerial_vehicle_system_for_identifying_foci_of_arboviral_disease_with_monitoring_system">
+        <hasCoAuthor rdf:resource="http://example.com#Lenardo_C._E._Silva"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2022</hasJournalPublicationYear>
+        <hasPublicationTitle>Modeling_unmanned_aerial_vehicle_system_for_identifying_foci_of_arboviral_disease_with_monitoring_system</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Monitoring_Value_Webs -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Monitoring_Value_Webs">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasPublicationTitle>Monitoring_Value_Webs</hasPublicationTitle>
+        <hasWorkshopYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2012</hasWorkshopYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Monograph -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Monograph">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Multiagent_System_for_Detecting_Passive_Students_in_Problem-Based_Learning -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Multiagent_System_for_Detecting_Passive_Students_in_Problem-Based_Learning">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2010</hasConferenceYear>
+        <hasPublicationTitle>Multiagent_System_for_Detecting_Passive_Students_in_Problem-Based_Learning</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#ORCID -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#ORCID">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#On_the_Move_to_Business-Driven_Alignment_of_Service_Monitoring_Requirements -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#On_the_Move_to_Business-Driven_Alignment_of_Service_Monitoring_Requirements">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2011</hasConferenceYear>
+        <hasPublicationTitle>On_the_Move_to_Business-Driven_Alignment_of_Service_Monitoring_Requirements</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Ontology_of_Product_Provenance_for_Value_Networks -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Ontology_of_Product_Provenance_for_Value_Networks">
+        <hasAuthorName rdf:resource="http://example.com#Angélica_Félix_de_Castro"/>
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2023</hasConferenceYear>
+        <hasPublicationTitle>Ontology_of_Product_Provenance_for_Value_Networks</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Open -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Open">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Phase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Optimizing_an_Architecture_with_Software_Pipelining_Strategies -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Optimizing_an_Architecture_with_Software_Pipelining_Strategies">
+        <hasCoAuthor rdf:resource="http://example.com#Silvio_Roberto_Fernandes"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</hasConferenceYear>
+        <hasPublicationTitle>Optimizing_an_Architecture_with_Software_Pipelining_Strategies</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Patrício_de_Alencar_Silva -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Patrício_de_Alencar_Silva">
+        <rdf:type rdf:resource="http://example.com#Author"/>
+        <rdf:type rdf:resource="http://example.com#Coauthor"/>
+        <rdf:type rdf:resource="http://example.com#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Paulo_Gabriel_Gadelha_Queiroz -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Paulo_Gabriel_Gadelha_Queiroz">
+        <rdf:type rdf:resource="http://example.com#Author"/>
+        <rdf:type rdf:resource="http://example.com#Coauthor"/>
+        <rdf:type rdf:resource="http://example.com#Person"/>
+        <hasAuthorName>Paulo_Gabriel_Gadelha_Queiroz</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Paulo_Henrique_Lopes_Silva -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Paulo_Henrique_Lopes_Silva">
+        <rdf:type rdf:resource="http://example.com#Author"/>
+        <rdf:type rdf:resource="http://example.com#Coauthor"/>
+        <rdf:type rdf:resource="http://example.com#Person"/>
+        <hasAuthorName>Paulo_Henrique_Lopes_Silva</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Person -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Person">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Publication -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Publication">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#PublicationDate -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#PublicationDate">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Publisher -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Publisher">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#QoS_management_for_real-time_DataBases_in_embedded_systems -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#QoS_management_for_real-time_DataBases_in_embedded_systems">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasCoAuthor rdf:resource="http://example.com#Yáskara_Y._M._P._Fernandes"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2008</hasConferenceYear>
+        <hasPublicationTitle>QoS_management_for_real-time_DataBases_in_embedded_systems</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Query_language_in_systems_with_hard_real-time_constraints -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Query_language_in_systems_with_hard_real-time_constraints">
+        <rdf:type rdf:resource="http://example.com#ConferencePaper"/>
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasCoAuthor rdf:resource="http://example.com#Yáskara_Y._M._P._Fernandes"/>
+        <hasPublicationTitle>Query_language_in_systems_with_hard_real-time_constraints</hasPublicationTitle>
+        <hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</hasPublicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#ResearchTopic -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#ResearchTopic">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Reviewer -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Reviewer">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#SPR_sensor_for_tampering_detection_in_biofuels -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#SPR_sensor_for_tampering_detection_in_biofuels">
+        <hasCoAuthor rdf:resource="http://example.com#Leiva_Casemiro_Oliveira"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2015</hasConferenceYear>
+        <hasPublicationTitle>SPR_sensor_for_tampering_detection_in_biofuels</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Sandra_Regina_Rocha_Silva -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Sandra_Regina_Rocha_Silva">
+        <rdf:type rdf:resource="http://example.com#Author"/>
+        <rdf:type rdf:resource="http://example.com#Coauthor"/>
+        <rdf:type rdf:resource="http://example.com#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Semantic_Data_Integration_Service_for_eHealth_Applications -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Semantic_Data_Integration_Service_for_eHealth_Applications">
+        <hasCoAuthor rdf:resource="http://example.com#Angélica_Félix_de_Castro"/>
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</hasConferenceYear>
+        <hasPublicationTitle>Semantic_Data_Integration_Service_for_eHealth_Applications</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Semantic_Discovery_and_Selection_of_Data_Connectors_in_International_Data_Spaces -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Semantic_Discovery_and_Selection_of_Data_Connectors_in_International_Data_Spaces">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasPublicationTitle>Semantic_Discovery_and_Selection_of_Data_Connectors_in_International_Data_Spaces</hasPublicationTitle>
+        <hasWorkshopYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2022</hasWorkshopYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Sensitivity_of_an_optical_sensor_that_operates_at_angular_or_wavelength_interrogation_mode -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Sensitivity_of_an_optical_sensor_that_operates_at_angular_or_wavelength_interrogation_mode">
+        <hasCoAuthor rdf:resource="http://example.com#Leiva_Casemiro_Oliveira"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2023</hasConferenceYear>
+        <hasPublicationTitle>Sensitivity_of_an_optical_sensor_that_operates_at_angular_or_wavelength_interrogation_mode</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Sentiment_analysis_of_Twitter_data_about_blockchain_technology -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Sentiment_analysis_of_Twitter_data_about_blockchain_technology">
+        <hasAuthorName rdf:resource="http://example.com#Angélica_Félix_de_Castro"/>
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</hasConferenceYear>
+        <hasPublicationTitle>Sentiment analysis of Twitter data about blockchain technology</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Serie -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Serie">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Silvio_Roberto_Fernandes -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Silvio_Roberto_Fernandes">
+        <rdf:type rdf:resource="http://example.com#Author"/>
+        <rdf:type rdf:resource="http://example.com#Coauthor"/>
+        <rdf:type rdf:resource="http://example.com#Person"/>
+        <hasAuthorName>Silvio_Roberto_Fernandes</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Software_Environments_as_Learning_Tools_for_Modeling_Engineering_Systems_-_A_Case_Study_on_Decentralized_Multi-loop_Control_System -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Software_Environments_as_Learning_Tools_for_Modeling_Engineering_Systems_-_A_Case_Study_on_Decentralized_Multi-loop_Control_System">
+        <hasCoAuthor rdf:resource="http://example.com#Lenardo_C._E._Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2015</hasConferenceYear>
+        <hasPublicationTitle>Software_Environments_as_Learning_Tools_for_Modeling_Engineering_Systems_-_A_Case_Study_on_Decentralized_Multi-loop_Control_System</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Summary_Report -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Summary_Report">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasPublicationTitle>Summary_Report</hasPublicationTitle>
+        <hasWorkshopYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2022</hasWorkshopYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Title -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Title">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Topic -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Topic">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Towards_Predictive_Self-adaptation_in_SOC_-_A_Value-based_Perspective -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Towards_Predictive_Self-adaptation_in_SOC_-_A_Value-based_Perspective">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2009</hasConferenceYear>
+        <hasPublicationTitle>Towards_Predictive_Self-adaptation_in_SOC_-_A_Value-based_Perspective</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Towards_a_Digital_Twin_for_Simulation_of_Organizational_and_Semantic_Interoperability_in_IDS_Ecosystems -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Towards_a_Digital_Twin_for_Simulation_of_Organizational_and_Semantic_Interoperability_in_IDS_Ecosystems">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasPublicationTitle>Towards_a_Digital_Twin_for_Simulation_of_Organizational_and_Semantic_Interoperability_in_IDS_Ecosystems</hasPublicationTitle>
+        <hasWorkshopYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2022</hasWorkshopYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Towards_a_Reference_Enterprise_Architecture_to_enforce_Digital_Sovereignty_in_International_Data_Spaces -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Towards_a_Reference_Enterprise_Architecture_to_enforce_Digital_Sovereignty_in_International_Data_Spaces">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2022</hasConferenceYear>
+        <hasPublicationTitle>Towards_a_Reference_Enterprise_Architecture_to_enforce_Digital_Sovereignty_in_International_Data_Spaces</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Um_Agente_Pedagógico_Animado_de_Apoio_à_Aprendizagem_Baseada_em_Problema -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Um_Agente_Pedagógico_Animado_de_Apoio_à_Aprendizagem_Baseada_em_Problema">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2012</hasJournalPublicationYear>
+        <hasPublicationTitle>Um_Agente_Pedagógico_Animado_de_Apoio_à_Aprendizagem_Baseada_em_Problema</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Um_Framework_para_Avaliação_de_Episódios_de_Gestão_do_Conhecimento -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Um_Framework_para_Avaliação_de_Episódios_de_Gestão_do_Conhecimento">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2008</hasConferenceYear>
+        <hasPublicationTitle>Um_Framework_para_Avaliação_de_Episódios_de_Gestão_do_Conhecimento</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Um_Sistema_de_Reconhecimento_de_Expressões_Faciais_para_Apoiar_um_Ambiente_Virtual_de_Aprendizagem -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Um_Sistema_de_Reconhecimento_de_Expressões_Faciais_para_Apoiar_um_Ambiente_Virtual_de_Aprendizagem">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2013</hasConferenceYear>
+        <hasPublicationTitle>Um_Sistema_de_Reconhecimento_de_Expressões_Faciais_para_Apoiar_um_Ambiente_Virtual_de_Aprendizagem</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Uma_abordagem_Baseada_em_Agentes_de_Apoio_à_Gestão_de_Projetos_de_Software -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Uma_abordagem_Baseada_em_Agentes_de_Apoio_à_Gestão_de_Projetos_de_Software">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2013</hasConferenceYear>
+        <hasPublicationTitle>Uma_abordagem_Baseada_em_Agentes_de_Apoio_à_Gestão_de_Projetos_de_Software</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Uma_proposta_de_rede_social_para_adolescentes_na_televisão_digital_interativa -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Uma_proposta_de_rede_social_para_adolescentes_na_televisão_digital_interativa">
+        <rdf:type rdf:resource="http://example.com#Publication"/>
+        <hasAuthorName rdf:resource="http://example.com#Bruno_de_Sousa_Monteiro"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2008</hasConferenceYear>
+        <hasPublicationTitle>Uma_proposta_de_rede_social_para_adolescentes_na_televisão_digital_interativa</hasPublicationTitle>
+        <hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</hasPublicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Unavailable -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Unavailable">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Phase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Using_NoC_routers_as_processing_elements -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Using_NoC_routers_as_processing_elements">
+        <hasCoAuthor rdf:resource="http://example.com#Silvio_Roberto_Fernandes"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2009</hasConferenceYear>
+        <hasPublicationTitle>Using_NoC_routers_as_processing_elements</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Value_Activity_Monitoring -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Value_Activity_Monitoring">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2013</hasConferenceYear>
+        <hasPublicationTitle>Value_Activity_Monitoring</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Venue -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Venue">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Volume -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Volume">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Workshop -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Workshop">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#WorkshopPaper -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#WorkshopPaper">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Yáskara_Y._M._P._Fernandes -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Yáskara_Y._M._P._Fernandes">
+        <rdf:type rdf:resource="http://example.com#Author"/>
+        <rdf:type rdf:resource="http://example.com#Coauthor"/>
+        <rdf:type rdf:resource="http://example.com#Person"/>
+        <hasAuthorName>Yáskara_Y._M._P._Fernandes</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#ZONA_-_An_adaptable_NoC-based_multiprocessor_addressed_to_education_on_system-on-chip_design -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#ZONA_-_An_adaptable_NoC-based_multiprocessor_addressed_to_education_on_system-on-chip_design">
+        <hasCoAuthor rdf:resource="http://example.com#Leonardo_Augusto_Casillo"/>
+        <hasCoAuthor rdf:resource="http://example.com#Silvio_Roberto_Fernandes"/>
+        <hasPublicationTitle>ZONA_-_An_adaptable_NoC-based_multiprocessor_addressed_to_education_on_system-on-chip_design</hasPublicationTitle>
+        <hasWorkshopYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2011</hasWorkshopYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#person -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#person">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#A_Coloured_Petri_Nets_Reference_Model_of_Insulin_Infusion_Pump_Control_Systems:_Assisting_the_Certification_Process -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#A_Coloured_Petri_Nets_Reference_Model_of_Insulin_Infusion_Pump_Control_Systems:_Assisting_the_Certification_Process">
+        <hasCoAuthor rdf:resource="http://example.com#Lenardo_C._E._Silva"/>
+        <hasPublicationTitle>A_Coloured_Petri_Nets_Reference_Model_of_Insulin_Infusion_Pump_Control_Systems:_Assisting_the_Certification_Process</hasPublicationTitle>
+        <hasWorkshopYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</hasWorkshopYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Aligning_Dutch_Logistics_Data_Spaces_Initiatives_to_The_International_Data_Spaces:_Discussing_The_State_of_Development -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Aligning_Dutch_Logistics_Data_Spaces_Initiatives_to_The_International_Data_Spaces:_Discussing_The_State_of_Development">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasPublicationTitle>Aligning_Dutch_Logistics_Data_Spaces_Initiatives_to_The_International_Data_Spaces:_Discussing_The_State_of_Development</hasPublicationTitle>
+        <hasWorkshopYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2022</hasWorkshopYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Ambiente_de_aprendizado_ubíquo_youubi:_design_e_avaliação -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Ambiente_de_aprendizado_ubíquo_youubi:_design_e_avaliação">
+        <rdf:type rdf:resource="http://example.com#Monograph"/>
+        <hasAuthorName rdf:resource="http://example.com#Bruno_de_Sousa_Monteiro"/>
+        <hasPublicationTitle>Ambiente_de_aprendizado_ubíquo_youubi:_design_e_avaliação</hasPublicationTitle>
+        <hasPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</hasPublicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#An_architecture&apos;s_propose_based_on_linked_data_and_IoT_to_improve_the_health_service -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#An_architecture&apos;s_propose_based_on_linked_data_and_IoT_to_improve_the_health_service">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</hasConferenceYear>
+        <hasPublicationTitle>An_architecture\&apos;s_propose_based_on_linked_data_and_IoT_to_improve_the_health_service</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Applications_of_convolutional_neural_networks_in_education:_A_systematic_literature_review -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Applications_of_convolutional_neural_networks_in_education:_A_systematic_literature_review">
+        <hasCoAuthor rdf:resource="http://example.com#Lenardo_C._E._Silva"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2023</hasJournalPublicationYear>
+        <hasPublicationTitle>Applications_of_convolutional_neural_networks_in_education:_A_systematic_literature_review</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Automatic_Q.A-Pair_Generation_for_Incident_Tickets_Handling:_An_Application_of_NLP -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Automatic_Q.A-Pair_Generation_for_Incident_Tickets_Handling:_An_Application_of_NLP">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</hasConferenceYear>
+        <hasPublicationTitle>Automatic_Q.A-Pair_Generation_for_Incident_Tickets_Handling:_An_Application_of_NLP</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Child_Search_Framework:_A_collaborative_information_retrieval_architecture_to_assist_children_in_the_search_process -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Child_Search_Framework:_A_collaborative_information_retrieval_architecture_to_assist_children_in_the_search_process">
+        <hasCoAuthor rdf:resource="http://example.com#Sandra_Regina_Rocha_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2013</hasConferenceYear>
+        <hasPublicationTitle>Child_Search_Framework:_A_collaborative_information_retrieval_architecture_to_assist_children_in_the_search_process</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Conceptual_Modeling_for_Corporate_Social_Responsibility:_A_Systematic_Literature_Review -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Conceptual_Modeling_for_Corporate_Social_Responsibility:_A_Systematic_Literature_Review">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasCoAuthor rdf:resource="http://example.com#Paulo_Gabriel_Gadelha_Queiroz"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</hasConferenceYear>
+        <hasPublicationTitle>Conceptual_Modeling_for_Corporate_Social_Responsibility:_A_Systematic_Literature_Review</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Design_da_interação_de_novos_produtos_para_TVD:_abordagens_qualitativas -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Design_da_interação_de_novos_produtos_para_TVD:_abordagens_qualitativas">
+        <hasAuthorName rdf:resource="http://example.com#Bruno_de_Sousa_Monteiro"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2008</hasConferenceYear>
+        <hasPublicationTitle>Design_da_interação_de_novos_produtos_para_TVD:_abordagens_qualitativas</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Development_of_Critical_Embedded_Systems_Using_Model-Driven_and_Product_Lines_Techniques:_A_Systematic_Review -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Development_of_Critical_Embedded_Systems_Using_Model-Driven_and_Product_Lines_Techniques:_A_Systematic_Review">
+        <hasCoAuthor rdf:resource="http://example.com#Paulo_Gabriel_Gadelha_Queiroz"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2014</hasConferenceYear>
+        <hasPublicationTitle>Development_of_Critical_Embedded_Systems_Using_Model-Driven_and_Product_Lines_Techniques:_A_Systematic_Review</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Doctraining_mobile:_a_serious_game_for_medical_students_training_in_clinical_cases -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Doctraining_mobile:_a_serious_game_for_medical_students_training_in_clinical_cases">
+        <hasCoAuthor rdf:resource="http://example.com#Bruno_de_Sousa_Monteiro"/>
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</hasConferenceYear>
+        <hasPublicationTitle>Doctraining_mobile:_a_serious_game_for_medical_students_training_in_clinical_cases</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Effectiveness_of_practices_with_sensors_in_engaging_in_meaningful_learning_in_higher_education:_Extending_a_framework_of_ubiquitous_learning -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Effectiveness_of_practices_with_sensors_in_engaging_in_meaningful_learning_in_higher_education:_Extending_a_framework_of_ubiquitous_learning">
+        <hasAuthorName rdf:resource="http://example.com#Bruno_de_Sousa_Monteiro"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2015</hasConferenceYear>
+        <hasPublicationTitle>Effectiveness_of_practices_with_sensors_in_engaging_in_meaningful_learning_in_higher_education:_Extending_a_framework_of_ubiquitous_learning</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#From_Traditional_to_Technologically_Influenced_Audit:_A_Compliance_Perspective -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#From_Traditional_to_Technologically_Influenced_Audit:_A_Compliance_Perspective">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2018</hasConferenceYear>
+        <hasPublicationTitle>From_Traditional_to_Technologically_Influenced_Audit:_A_Compliance_Perspective</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Higia_Way_Software_Validation:_Applying_TAM_Methodology -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Higia_Way_Software_Validation:_Applying_TAM_Methodology">
+        <hasCoAuthor rdf:resource="http://example.com#Bruno_de_Sousa_Monteiro"/>
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2022</hasConferenceYear>
+        <hasPublicationTitle>Higia_Way_Software_Validation:_Applying_TAM_Methodology</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#IPNoSys_II:_A_New_Architecture_for_IPNoSys_Programming_Model -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#IPNoSys_II:_A_New_Architecture_for_IPNoSys_Programming_Model">
+        <hasCoAuthor rdf:resource="http://example.com#Silvio_Roberto_Fernandes"/>
+        <hasPublicationTitle>IPNoSys_II:_A_New_Architecture_for_IPNoSys_Programming_Model</hasPublicationTitle>
+        <hasWorkshopYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2015</hasWorkshopYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Information_State:_A_Representation_for_Dynamic_Processes_Using_Information_Theory. -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Information_State:_A_Representation_for_Dynamic_Processes_Using_Information_Theory.">
+        <hasAuthorName rdf:resource="http://example.com#Amanda_Gondim_de_Oliveira"/>
+        <hasAuthorName>Amanda_Gondim_de_Oliveira</hasAuthorName>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2018</hasConferenceYear>
+        <hasLanguageName rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">English</hasLanguageName>
+        <hasPublicationTitle>Information_State:_A_Representation_for_Dynamic_Processes_Using_Information_Theory.</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Intelligent_software_engineering_in_the_context_of_agile_software_development:_A_systematic_literature_review -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Intelligent_software_engineering_in_the_context_of_agile_software_development:_A_systematic_literature_review">
+        <hasCoAuthor rdf:resource="http://example.com#Lenardo_C._E._Silva"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</hasJournalPublicationYear>
+        <hasPublicationTitle>Intelligent_software_engineering_in_the_context_of_agile_software_development:_A_systematic_literature_review</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Knowledgemon_Hunter:_A_Serious_Game_with_Geolocation_to_Support_Learning_of_Children_with_Autism_and_Learning_Difficulties -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Knowledgemon_Hunter:_A_Serious_Game_with_Geolocation_to_Support_Learning_of_Children_with_Autism_and_Learning_Difficulties">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2017</hasConferenceYear>
+        <hasPublicationTitle>Knowledgemon_Hunter:_A_Serious_Game_with_Geolocation_to_Support_Learning_of_Children_with_Autism_and_Learning_Difficulties</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Meteorological_Data_Mining:_a_Case_Study_in_the_Brazil_Semi-Arid -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Meteorological_Data_Mining:_a_Case_Study_in_the_Brazil_Semi-Arid">
+        <hasCoAuthor rdf:resource="http://example.com#Angélica_Félix_de_Castro"/>
+        <hasCoAuthor rdf:resource="http://example.com#Danniel_Cavalcante_Lopes"/>
+        <hasPublicationTitle>Meteorological_Data_Mining:_a_Case_Study_in_the_Brazil_Semi-Arid</hasPublicationTitle>
+        <hasWorkshopYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2011</hasWorkshopYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Network_Dependability:_An_Availability_Measure_in_N-Tier_Client/Server_Architecture -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Network_Dependability:_An_Availability_Measure_in_N-Tier_Client/Server_Architecture">
+        <hasAuthorName rdf:resource="http://example.com#Flávia_Estelia_Silva_Coelho"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2003</hasConferenceYear>
+        <hasPublicationTitle>Network_Dependability:_An_Availability_Measure_in_N-Tier_Client/Server_Architecture</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Privacy_Value_Modeling:_A_Gateway_to_Ethical_Big_Data_Handling_(full_paper) -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Privacy_Value_Modeling:_A_Gateway_to_Ethical_Big_Data_Handling_(full_paper)">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</hasConferenceYear>
+        <hasPublicationTitle>&apos;Privacy_Value_Modeling:_A_Gateway_to_Ethical_Big_Data_Handling_(full_paper)&apos;</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Process_Enhancement_in_Process_Mining:_A_Literature_Review -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Process_Enhancement_in_Process_Mining:_A_Literature_Review">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2018</hasConferenceYear>
+        <hasPublicationTitle>Process_Enhancement_in_Process_Mining:_A_Literature_Review</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Processing_while_routing:_a_network-on-chipbased_parallel_system -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Processing_while_routing:_a_network-on-chipbased_parallel_system">
+        <hasCoAuthor rdf:resource="http://example.com#Silvio_Roberto_Fernandes"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2009</hasJournalPublicationYear>
+        <hasPublicationTitle>Processing_while_routing:_a_network-on-chipbased_parallel_system</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#QL-RTDB:_Query_Language_for_Real-Time_Databases -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#QL-RTDB:_Query_Language_for_Real-Time_Databases">
+        <hasCoAuthor rdf:resource="http://example.com#Yáskara_Y._M._P._Fernandes"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2005</hasConferenceYear>
+        <hasPublicationTitle>QL-RTDB:_Query_Language_for_Real-Time_Databases</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#SEMcTrA:_a_multilayer_specialized_system_for_COVID-19_remote_triage,_resource_allocation_and_teleconsultation -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#SEMcTrA:_a_multilayer_specialized_system_for_COVID-19_remote_triage,_resource_allocation_and_teleconsultation">
+        <hasCoAuthor rdf:resource="http://example.com#Leiva_Casemiro_Oliveira"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2022</hasConferenceYear>
+        <hasPublicationTitle>&apos;SEMcTrA:_a_multilayer_specialized_system_for_COVID-19_remote_triage,_resource_allocation_and_teleconsultation&apos;</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#SPL_integrated_with_Microservices:_a_hybrid_architectural_proposal_for_multitenant_SaaS -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#SPL_integrated_with_Microservices:_a_hybrid_architectural_proposal_for_multitenant_SaaS">
+        <hasCoAuthor rdf:resource="http://example.com#Paulo_Gabriel_Gadelha_Queiroz"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2023</hasConferenceYear>
+        <hasPublicationTitle>SPL_integrated_with_Microservices:_a_hybrid_architectural_proposal_for_multitenant_SaaS</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Smart_health_of_things:_a_model_based_in_data_mining_for_an_IoT_health_system_used_in_hospital_and_home_urgencies -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Smart_health_of_things:_a_model_based_in_data_mining_for_an_IoT_health_system_used_in_hospital_and_home_urgencies">
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</hasConferenceYear>
+        <hasPublicationTitle>Smart_health_of_things:_a_model_based_in_data_mining_for_an_IoT_health_system_used_in_hospital_and_home_urgencies</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Towards_Green_Value_Network_Modeling:_A_Case_from_the_Agribusiness_Sector_in_Brazil -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Towards_Green_Value_Network_Modeling:_A_Case_from_the_Agribusiness_Sector_in_Brazil">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</hasConferenceYear>
+        <hasPublicationTitle>Towards_Green_Value_Network_Modeling:_A_Case_from_the_Agribusiness_Sector_in_Brazil</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#U-Learning:_A_Collaborative_Experience_in_the_Urban_Context -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#U-Learning:_A_Collaborative_Experience_in_the_Urban_Context">
+        <hasAuthorName rdf:resource="http://example.com#Bruno_de_Sousa_Monteiro"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2017</hasConferenceYear>
+        <hasPublicationTitle>U-Learning:_A_Collaborative_Experience_in_the_Urban_Context</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Use_of_JINI_Technology_for_Design_NMSs:_From_General_Concepts_to_Prototypes_Implementation -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Use_of_JINI_Technology_for_Design_NMSs:_From_General_Concepts_to_Prototypes_Implementation">
+        <hasCoAuthor rdf:resource="http://example.com#Helcio_Wagner_da_Silva"/>
+        <hasConferenceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006</hasConferenceYear>
+        <hasPublicationTitle>Use_of_JINI_Technology_for_Design_NMSs:_From_General_Concepts_to_Prototypes_Implementation</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#WS-GIS:_Towards_a_SOA-Based_SDI_Federation -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#WS-GIS:_Towards_a_SOA-Based_SDI_Federation">
+        <hasCoAuthor rdf:resource="http://example.com#Patrício_de_Alencar_Silva"/>
+        <hasPublicationTitle>WS-GIS:_Towards_a_SOA-Based_SDI_Federation</hasPublicationTitle>
+        <hasWorkshopYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006</hasWorkshopYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Youubi:_Open_software_for_ubiquitous_learning -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Youubi:_Open_software_for_ubiquitous_learning">
+        <hasCoAuthor rdf:resource="http://example.com#Bruno_de_Sousa_Monteiro"/>
+        <hasCoAuthor rdf:resource="http://example.com#Francisco_Milton_Mendes_Neto"/>
+        <hasJournalPublicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2016</hasJournalPublicationYear>
+        <hasPublicationTitle>Youubi:_Open_software_for_ubiquitous_learning</hasPublicationTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://example.com#Abstract">
+        <rdfs:label xml:lang="en">Abstract</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#AccessType">
+        <rdfs:label xml:lang="en">AccessType</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Article">
+        <rdfs:label xml:lang="en">Article</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Author">
+        <rdfs:label xml:lang="en">Author</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Award">
+        <rdfs:label xml:lang="en">Award</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#BookChapter">
+        <rdfs:label xml:lang="en">Book Chapter</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Citation">
+        <rdfs:label xml:lang="en">Citation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Closed">
+        <rdfs:label xml:lang="en">Closed</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Coauthor">
+        <rdfs:label xml:lang="en">Coauthor</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Collaboration">
+        <rdfs:label xml:lang="en">Collaboration</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Conference">
+        <rdfs:label xml:lang="en">Conference</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#ConferencePaper">
+        <rdfs:label xml:lang="en">Conference paper</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#ConferenceTheme">
+        <rdfs:label xml:lang="en">Conference Theme</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#DOI">
+        <rdfs:label xml:lang="en">DOI</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#DateOfConference">
+        <rdfs:label xml:lang="en">Date of Conference</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Edition">
+        <rdfs:label xml:lang="en">Edition</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Editor">
+        <rdfs:label xml:lang="en">Editor</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Filiation">
+        <rdfs:label xml:lang="en">Filiation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Journal">
+        <rdfs:label xml:lang="en">Journal</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Keyword">
+        <rdfs:label xml:lang="en">Keyword</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Language">
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Monograph">
+        <rdfs:label xml:lang="en">Monograph</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#ORCID">
+        <rdfs:label xml:lang="en">ORCID</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Open">
+        <rdfs:label xml:lang="en">Open</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Person">
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Publication">
+        <rdfs:label xml:lang="en">Publication</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#PublicationDate">
+        <rdfs:label xml:lang="en">PublicationDate</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Publisher">
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#ResearchTopic">
+        <rdfs:label xml:lang="en">Research Topic</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Reviewer">
+        <rdfs:label xml:lang="en">Reviewer</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Serie">
+        <rdfs:label xml:lang="en">Serie</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Title">
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Topic">
+        <rdfs:label xml:lang="en">Topic</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Unavailable">
+        <rdfs:label xml:lang="en">Unavailable</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Venue">
+        <rdfs:label xml:lang="en">Venue</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Volume">
+        <rdfs:label xml:lang="en">Volume</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Workshop">
+        <rdfs:label xml:lang="en">Workshop</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#WorkshopPaper">
+        <rdfs:label xml:lang="en">Workshop paper</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com#Abstract"/>
+            <rdf:Description rdf:about="http://example.com#Award"/>
+            <rdf:Description rdf:about="http://example.com#Citation"/>
+            <rdf:Description rdf:about="http://example.com#ConferenceTheme"/>
+            <rdf:Description rdf:about="http://example.com#DOI"/>
+            <rdf:Description rdf:about="http://example.com#DateOfConference"/>
+            <rdf:Description rdf:about="http://example.com#Edition"/>
+            <rdf:Description rdf:about="http://example.com#Filiation"/>
+            <rdf:Description rdf:about="http://example.com#Keyword"/>
+            <rdf:Description rdf:about="http://example.com#Language"/>
+            <rdf:Description rdf:about="http://example.com#ORCID"/>
+            <rdf:Description rdf:about="http://example.com#PublicationDate"/>
+            <rdf:Description rdf:about="http://example.com#Publisher"/>
+            <rdf:Description rdf:about="http://example.com#ResearchTopic"/>
+            <rdf:Description rdf:about="http://example.com#Serie"/>
+            <rdf:Description rdf:about="http://example.com#Title"/>
+            <rdf:Description rdf:about="http://example.com#Topic"/>
+            <rdf:Description rdf:about="http://example.com#Volume"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com#Article"/>
+            <rdf:Description rdf:about="http://example.com#BookChapter"/>
+            <rdf:Description rdf:about="http://example.com#ConferencePaper"/>
+            <rdf:Description rdf:about="http://example.com#Journal"/>
+            <rdf:Description rdf:about="http://example.com#Monograph"/>
+            <rdf:Description rdf:about="http://example.com#WorkshopPaper"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com#Closed"/>
+            <rdf:Description rdf:about="http://example.com#Open"/>
+            <rdf:Description rdf:about="http://example.com#Unavailable"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://example.com#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#pub">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#date">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Esta regra associa autores ativos com base na quantidade de publicações em um ano específico (por exemplo, 2020).</rdfs:comment>
+        <rdfs:label>Identificar Autores Ativos em um Ano Específico</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://example.com#Person"/>
+                        <swrl:argument1 rdf:resource="http://example.com#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://example.com#hasAuthorName"/>
+                                <swrl:argument1 rdf:resource="http://example.com#p"/>
+                                <swrl:argument2 rdf:resource="http://example.com#pub"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://example.com#Publication"/>
+                                        <swrl:argument1 rdf:resource="http://example.com#pub"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://example.com#hasPublicationYear"/>
+                                                <swrl:argument1 rdf:resource="http://example.com#pub"/>
+                                                <swrl:argument2>2020</swrl:argument2>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="http://example.com#date"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-31T23:59:59Z</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://example.com#ActiveAuthor"/>
+                        <swrl:argument1 rdf:resource="http://example.com#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
